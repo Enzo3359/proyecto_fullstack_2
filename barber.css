@@ -1,0 +1,260 @@
+/* Configuración general */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* Fondo negro principal */
+  color: #ffffff; 
+  margin: 0;
+  padding: 0;
+}
+
+/* Enlaces generales en Azul Barbería */
+a {
+  color: #0055ff; 
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*BARRA DE NAVEGACIÓN */
+header {
+  background-color: #111111;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 4px solid #d62828;
+}
+
+nav a {
+  color: #ffffff;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #0055ff; 
+}
+
+/*SECCIÓN INICIO (HERO)*/
+#inicio {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #0d0d0d;
+  border-bottom: 2px solid #0055ff; 
+}
+
+#inicio h1 {
+  color: #d62828; 
+  font-size: 32px;
+}
+
+#inicio a {
+  display: inline-block;
+  background-color: #d62828; 
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#inicio a:hover {
+  background-color: #b01e1e; 
+  text-decoration: none;
+}
+
+/*SERVICIOS Y TARJETAS*/
+#servicios, #reseñas {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #d62828; 
+  text-align: center;
+}
+
+h3 {
+  color: #0055ff; 
+  border-bottom: 2px solid #0055ff;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+/*Estilo para cada tarjeta de servicio*/
+.servicio-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  border-left: 4px solid #0055ff; 
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.servicio-card h4 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.servicio-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.servicio-card strong {
+  color: #d62828; 
+  font-size: 18px;
+}
+
+/*FORMULARIO DE RESERVA*/
+#formulario {
+  background-color: #1a1a1a;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 8px;
+  border: 2px solid #0055ff; 
+}
+
+#formulario h4 {
+  color: #d62828;
+  margin-top: 0;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #444444;
+  background-color: #000000;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+form input:focus, form select:focus {
+  outline: none;
+  border-color: #0055ff; 
+}
+
+form button {
+  width: 100%;
+  background-color: #0055ff; 
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0040c7;
+}
+
+/*RESEÑAS*/
+.reseña-card {
+  background-color: #1a1a1a;
+  border-left: 4px solid #d62828; 
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 0 6px 6px 0;
+}
+
+.reseña-card blockquote {
+  margin: 5px 0 0 0;
+  font-style: italic;
+  color: #cccccc;
+}
+
+/* PIE DE PÁGINA (FOOTER)*/
+footer {
+  background-color: #0d0d0d;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  border-top: 4px solid #0055ff; 
+}
+
+footer h2 {
+  color: #ffffff;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 15px;
+}
+
+.redesSociales a {
+  color: #d62828; 
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.redesSociales a:hover {
+  color: #ffffff;
+}
+
+body.modo-oscuro {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+}
+
+body.modo-oscuro header {
+  background-color: #ffffff;
+  border-bottom: 4px solid #d62828;
+}
+
+body.modo-oscuro nav a {
+  color: #1a1a1a;
+}
+
+body.modo-oscuro #inicio {
+  background-color: #eeeeee;
+}
+
+body.modo-oscuro .servicio-card,
+body.modo-oscuro .reseña-card,
+body.modo-oscuro #formulario {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-color: #cccccc;
+}
+
+body.modo-oscuro .servicio-card h4,
+body.modo-oscuro form label {
+  color: #1a1a1a;
+}
+
+body.modo-oscuro form input,
+body.modo-oscuro form select {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-color: #cccccc;
+}
+
+body.modo-oscuro footer {
+  background-color: #eeeeee;
+}
+
+body.modo-oscuro footer h2 {
+  color: #1a1a1a;
+}

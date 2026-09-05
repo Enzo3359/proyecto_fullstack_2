@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Barba y Estilo - Barberia Urbana </title>
+    <!-- alzar aqui el archivo CSS -->
+    <link rel="stylesheet" href="barber.css">
+    
+
+</head>
+<body>
+    <header> <!-- Todo (R1): <nav> con el logo, nombre y enlaces a Inicio, Servicios, Precios, Contactos-->
+        <nav>
+            <!-- logo -->
+            <!--img class="logo" src="" alt="Logo de Barba y Estilo"/-->
+            <!-- navegacion entre secciones -->
+            <a href="#inicio"> Inicio </a>
+            <a href="#servicios"> Servicios </a>
+            <a href="#reseñas"> Reseñas </a>
+            <a href="#contactos"> Contactos </a>
+            <button id="boton_cambio" aria-label="Cambiar modo claro/oscuro">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio"> <!-- Todo (R2): Hero section -->
+            <!-- La imagen sera implementada a traves de CSS con background-image, por el momento este esta pendiente -->
+            <h1> Estilo urbano, actitud propia </h1>
+            <p> En Barba y Estilo combinamos técnica clásica y tendencias urbanas para que cada corte sea tan único como tú. </p>
+            <a href="#formulario"> Reserva tu cita </a> 
+        </section>
+
+        <section id="servicios"> <!-- Todo (R3): <section> de los servicios con un <article> por cada servicio -->
+            <h2> Nuestros servicios disponibles: </h2>
+            
+            <div class="categoria-cortes">
+                <h3> Cortes: </h3>
+
+                <article class="servicio-card">
+                    <h4> Corte Clasico </h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRHbFJMSdRdkBG-sfXvbJHEeeUChubbyEuopg4Mef3ocTCUT19idJoFec&s=10" alt="Corte de cabello clasico" />
+                    <p> Corte tradicional con tijera y máquina, prolijo y versátil para el día a día. </p>
+                    <p> <strong> Precio: $8.000 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Corte Fade </h4>
+                    <img src="https://i.pinimg.com/1200x/29/5f/a1/295fa1a1c12209925a75b28578c1532a.jpg" alt="Corte de cabello fade" />
+                    <p> Degradado progresivo en los laterales que se funde suavemente con el largo </p>
+                    <p> <strong> Precio: $10.000 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Corte Mullet </h4>
+                    <img src="https://i.pinimg.com/736x/f4/0d/f3/f40df3c3a6e9ba13632d3c75ff8e6cbd.jpg" alt="Corte de cabello mullet" />
+                    <p> Corto en los laterales y frente, más largo en la nuca, con actitud retro-urbana. </p>
+                    <p> <strong> Precio: $9.000 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Corte Undercut </h4>
+                    <img src="https://i.pinimg.com/1200x/60/d5/1f/60d51ffede88db44eca7cc2af2f4aa25.jpg" alt="Corte de cabello undercut" />
+                    <p> Laterales rapados al máximo y parte superior larga para peinar con estilo </p>
+                    <p> <strong> Precio: $9.500 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Corte Pompadour </h4>
+                    <img src="https://i.pinimg.com/736x/4c/39/c3/4c39c379294fd9fc9d9fc05cad22e54a.jpg" alt="Corte de cabello pompadour" />
+                    <p> Volumen marcado hacia atrás en la parte superior, con laterales cortos y prolijos. </p>
+                    <p> <strong> Precio: $10.500 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Corte a Tijera </h4>
+                    <img src="https://i.pinimg.com/736x/05/96/be/0596beadf6fe823ee1dd67b88a1c8b98.jpg" alt="Corte de cabello con tijeras" />
+                    <p> Técnica 100% con tijera para un acabado natural, sin líneas marcadas de máquina. </p>
+                    <p> <strong> Precio: $8.500 </strong> </p>
+                </article>
+
+            </div>
+
+            <div class="categoria-barba">
+                <h3> Barba: </h3>
+
+                <article class="servicio-card">
+                    <h4> Perfilado de Barba </h4>
+                    <img src="https://i.pinimg.com/736x/15/2a/39/152a39886bf7384e526fd8ad9fb2b3e8.jpg" alt="Perfilado de barba" />
+                    <p> Delineado y definición de contornos para una barba prolija y pareja. </p>
+                    <p> <strong> Precio: $6.000 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Barba Completa </h4>
+                    <img src="https://i.pinimg.com/736x/97/87/05/97870569d643b7bb46456b2e571ca1a9.jpg" alt="Barba completa" />
+                    <p> Corte, perfilado e hidratación completa de la barba. </p>
+                    <p> <strong> Precio: $7.500 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Diseño de Barba - personalizados </h4>
+                    <img src="https://i.pinimg.com/1200x/aa/76/ac/aa76ac6bca454bb0ce5abdb750f29c6f.jpg" alt="Diseño de barba italiana" />
+                    <p> Diseños personalizados con líneas y patrones a elección del cliente. </p>
+                    <p> <strong> Precio: $8.000 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Afeitado Clasico </h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXwW1JtDNxqlFtIV88fmrOvg3Gp9jzhwnFVmPxd4Syc9nbOJ7HZZf4edY0&s=10" alt="Afeitado clasico" />
+                    <p> Afeitado tradicional con navaja, toalla caliente y loción post-afeitado. </p>
+                    <p> <strong> Precio: $7.000 </strong> </p>
+                </article>
+
+            </div>
+
+            <div class="categoria-tintes">
+                <h3> Tintes: </h3>
+
+                <article class="servicio-card">
+                    <h4> Decoloracion </h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCmApLaroy71orSke4R8gW6rkxjmYoMcKtApxy8TO0Pg&s=10" alt="Decoloracion de cabello" />
+                    <p> Aclarado del cabello como base para colores fantasía o mechas. </p>
+                    <p> <strong> Precio: $15.000 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Mechas Platinadas </h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn315L2vx-2aJamQs0ZMEvEwph6BjEy7ign7QkjrYKuA&s=10" alt="Cabello con mechas platinadas" />
+                    <p> Mechones decolorados a tono platino para un look llamativo. </p>
+                    <p> <strong> Precio: $18.000 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Reaices de Colores </h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc_V8LFPfdCE3ifJrZ9RhCRiSoclxnU74lGAwZU5KEyg&s=10" alt="Cabello con las raices pintadas" />
+                    <p> Degradado de raíz oscura a puntas más claras, tendencia actual. </p>
+                    <p> <strong> Precio: $16.000 </strong> </p>
+                </article>
+
+                <article class="servicio-card">
+                    <h4> Tinte Color Fantasía </h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZAHM_PAxw6tOIeQ7d5ZKPJ-YZnWEix40avJb2HMxtIA&s=10" alt="Cabello con color fantasia" />
+                    <p> Colores vivos y no convencionales (azul, verde, plateado, etc.) a elección. </p>
+                    <p> <strong> Precio: $17.000 </strong> </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="formulario"> <!-- Todo (R5, 6 y 7): <section> con un <form> de reserva de cita -->
+            <form>
+                <h4> Ingrese sus datos para realizar la reserva: </h4>
+
+                <label for="nombre"> Nombre Completo: </label> <!-- Ingreso de nombre -->
+                <input type="text" placeholder="Ingrese su nombre" id="nombre"/>
+
+                <label for="telefono"> Numero de Telefono </label> <!-- Ingreso numero de telefono -->
+                <input type="tel" placeholder="Ingrese su numero" id="telefono" />
+
+                <label for="opciones"> Seleccione el servicio deseado: </label> <!-- seleccion del servicio -->
+                <select id="opciones">
+                    <option value="categoria-cortes"> Corte de Pelo </option>
+                    <option value="categoria-barba"> Arreglo de Barba </option>
+                    <option value="categoria-tintes"> Tintura de Pelo </option>
+                </select>
+
+                <label for="fecha"> Fecha a Agendar </label> <!-- seleccion de la fecha para la cita -->
+                <input type="date" id="fecha" />
+
+                <button type="submit"> Reservar </button> <!-- boton para reservar -->
+            </form>
+        </section>
+
+        <section id="reseñas"> <!-- Todo (R8): <section> de galeria / reseñas -->
+                <h2> La gente ha comentado: </h2>
+
+                <article class="reseña-card">
+                    <p> <strong> Enzo Moraga: </strong> ⭐⭐⭐⭐⭐ </p>
+                    <blockquote> "Excelente atención, el mejor corte que me han hecho en años. Muy profesionales y puntuales." </blockquote>
+                </article>
+
+                <article class="reseña-card">
+                    <p> <strong> Martin Roa: </strong> ⭐⭐⭐⭐⭐ </p>
+                    <blockquote> "Me encantó el ambiente del local y el resultado del fade quedó espectacular. Sin duda vuelvo." </blockquote>
+                </article>
+
+                <article class="reseña-card">
+                    <p> <strong> Ciro Huentelican: </strong> ⭐⭐⭐⭐ </p>
+                    <blockquote> "Buen servicio en general, aunque tuve que esperar un poco más de lo esperado. El corte quedó bien igual." </blockquote>
+                </article>
+
+                <article class="reseña-card">
+                    <p> <strong> Agustin Opazo: </strong> ⭐⭐⭐⭐⭐ </p>
+                    <blockquote> "Llevo años viniendo a esta barbería y nunca me han decepcionado. Recomendado 100%." </blockquote>
+                </article>
+        </section>
+    </main>
+
+    <footer id="contactos"> <!-- todo (R10): direccion, horarios, redes sociales -->
+            <div class="sucursales">  
+                <h2> Encuentranos en: </h2>
+                <article>
+                    <ul>
+                        <li>
+                            <a href="https://maps.app.goo.gl/D3W7LqpEB93fKg8z5" target="_blank" rel="noopener noreferrer"> direccion viña del mar </a>
+                            <p> Horario: Lunes a Sábado, 10:00 a 20:00 hrs </p>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/KdnjvkoEndYgzG5d7" target="_blank" rel="noopener noreferrer"> direccion limache </a>
+                            <p> Horario: Lunes a Viernes 10:00–20:00, Sábado 10:00–18:00 </p>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="redesSociales">
+                <h2> Nuestras Redes Sociales: </h2>
+
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"> Instagram </a>
+                
+                    <a href="https://www.facebook.com/?locale=es_LA" target="_blank" rel="noopener noreferrer"> Facebook </a>
+                
+                    <a href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer"> X </a>
+            </div>
+            
+
+        <p>&copy; 2026 Barba y Estilo - Barbería Urbana. Todos los derechos reservados.</p>
+
+    </footer>
+
+    <!-- alzar aqui el archivo JavaScript -->
+    <script src="barber.js"></script>
+
+</body>
+</html>
