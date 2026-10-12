@@ -26,42 +26,91 @@
             <h2> Ingrese sus datos para realizar la reserva: </h2>
 
             <label for="nombre"> Nombre Completo: </label> <!-- Ingreso de nombre -->
-            <input type="text" placeholder="Ingrese su nombre" id="nombre"/>
+            <input type="text" placeholder="Ingrese su nombre" id="nombre" required/>
 
-            <label for="telefono"> Numero de Telefono </label> <!-- Ingreso numero de telefono -->
-            <input type="tel" placeholder="Ingrese su numero" id="telefono" />
+            <label for="telefono"> Numero de Telefono: </label> <!-- Ingreso numero de telefono -->
+            <input type="tel" placeholder="Ingrese su numero" id="telefono" required/>
 
             <label for="opciones"> Seleccione el servicio deseado: </label> <!-- seleccion del servicio -->
-            <select id="opciones">
-                <option value="categoria-cortes"> Corte de Pelo </option>
-                <option value="categoria-barba"> Arreglo de Barba </option>
-                <option value="categoria-tintes"> Tintura de Pelo </option>
+            <select id="opciones" required>
+                <option value=""> Seleccione un servicio </option>
+
+                <optgroup label="Cortes">
+                    <option value="corte-clasico"> Corte Clásico </option>
+                    <option value="corte-fade"> Corte Fade </option>
+                    <option value="corte-mullet"> Corte Mullet </option>
+                    <option value="corte-undercut"> Corte Undercut </option>
+                    <option value="corte-pompadour"> Corte Pompadour </option>
+                    <option value="corte-tijera"> Corte a Tijera </option>
+                </optgroup>
+
+                <optgroup label="Barba">
+                    <option value="perfilado-barba"> Perfilado de Barba </option>
+                    <option value="barba-completa"> Barba Completa </option>
+                    <option value="diseno-barba"> Diseño de Barba </option>
+                    <option value="afeitado-clasico"> Afeitado Clásico </option>
+                </optgroup>
+
+                <optgroup label="Tintes">
+                    <option value="decoloracion"> Decoloración </option>
+                    <option value="mechas-platinadas"> Mechas Platinadas </option>
+                    <option value="raices-colores"> Raíces de Colores </option>
+                    <option value="tinte-fantasia"> Tinte Color Fantasía </option>
+                </optgroup>
+
             </select>
 
-            <label for="fecha"> Fecha a Agendar </label> <!-- seleccion de la fecha para la cita -->
-            <input type="date" id="fecha" />
+            <label for="fecha"> Fecha a Agendar: </label> <!-- seleccion de la fecha para la cita -->
+            <input type="date" id="fecha" required/>
 
-            <h2> Seleccione un Barbero </h2>
-            <p> Imagen de Barbero + posible descripcion
-                <hr>
-                IDEA: poner una foto de nosotros + la descripcion
-            </p>
+            <label for="hora"> Hora a Agendar: </label>
+            <input type="time" id="hora" min="10:00" max="20:00" required/>
+
+            <section id="lista-barberos">
+                <h2> Seleccione un Barbero </h2>
+
+                <article class="barbero">
+                    <img src="" alt="Foto de [nombre del barbero]"/> 
+                    <h3> Dylan Elgueta </h3>
+                    <p> descripcion / especialidad del barbero </p>
+                    <label for="barbero-1"> Elegir a este barbero </label>
+                    <input type="radio" id="barbero-1" name="barbero" value="Dylan" required/>
+                </article>
+
+                <article class="barbero">
+                    <img src="" alt="Foto de [nombre del barbero]"/>
+                    <h3> Enzo Moraga </h3>
+                    <p> descripcion / especialidad del barbero </p>
+                    <label for="barbero-2"> Elegir a este barbero </label>
+                    <input type="radio" id="barbero-2" name="barbero" value="Enzo" required/>
+                </article>
+
+                <article class="barbero">
+                    <img src="" alt="Foto de [nombre del barbero]"/>
+                    <h3> Brandom Espinoza </h3>
+                    <p> descripcion / especialidad del barbero </p>
+                    <label for="barbero-3"> Elegir a este barbero </label>
+                    <input type="radio" id="barbero-3" name="barbero" value="Brandom" required/>
+                </article>
+
+            </section>
             <!-- FALTA OPCIONES DE BARBEROS A ELEGIR 
-            QUISAS CON UNA MINI DESCRIPCION DEL BARBERO -->
+            QUISAS CON UNA MINI DESCRIPCION DEL BARBERO 
+            CON UNA FOTO DE NOSOTROS PARA EL MEME-->
 
             <button type="submit"> Reservar </button> <!-- boton para reservar -->
-
-            <div id="mis-reservas">
-                <a href="mis-reservas.html"> <button type="button"> Mis Reservas </button> </a>
-                <ul id="lista-reservas"></ul>
-            </div>
-
+                
         </form>
+
+        <a href="mis-reservas.html" class="boton"> Mis Reservas </a>
+
     </main>
 
     <footer>
         <p>&copy; 2026 Barba y Estilo - Barbería Urbana. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="../../JavaScript/reserva.js"></script>
 
 </body>
 </html>
