@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Barba y Estilo - Reseñas </title>
+    <link rel="stylesheet" href="../../CSS/barber.css" />
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <a href="../../HTML/index.html"> Inicio </a>
+            <a href="catalogo-servicios.html"> Servicios </a>
+            <a href="reserva-cita.html"> Reservar Cita </a>
+            <a href="resenas.html"> Reseñas </a>
+            <a href="contactos.html"> Contactos </a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="reseñas"> <!-- Todo (R8): <section> de galeria / reseñas -->
+                <h1> RESEÑAS DE NUESTROS CLIENTES: </h1>
+                <p> Cuéntanos tu experiencia o lee lo que opina la comunidad </p>
+
+                <div id="lista-resenas"></div>
+
+                <article class="reseña-card">
+                    <p> <strong> Enzo Moraga: </strong> ★★★★★ </p>
+                    <blockquote> "Excelente atención, el mejor corte que me han hecho en años. Muy profesionales y puntuales." </blockquote>
+                </article>
+
+                <article class="reseña-card">
+                    <p> <strong> Martin Roa: </strong> ★★★★★ </p>
+                    <blockquote> "Me encantó el ambiente del local y el resultado del fade quedó espectacular. Sin duda vuelvo." </blockquote>
+                </article>
+
+                <article class="reseña-card">
+                    <p> <strong> Ciro Huentelican: </strong> ★★★★☆ </p>
+                    <blockquote> "Buen servicio en general, aunque tuve que esperar un poco más de lo esperado. El corte quedó bien igual." </blockquote>
+                </article>
+
+                <article class="reseña-card">
+                    <p> <strong> Agustin Opazo: </strong> ★★★★★ </p>
+                    <blockquote> "Llevo años viniendo a esta barbería y nunca me han decepcionado. Recomendado 100%." </blockquote>
+                </article>
+
+                <h2> Danos tu opinion: </h2>
+                <form id="form-resena" class="space-y-4">
+                <div>
+                    <label for="nombre-resena" class="block text-xs uppercase text-gray-300 mb-1">Tu Nombre</label>
+                    <input type="text" id="nombre-resena" required placeholder="Ej. Carlos Silva" class="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded text-white">
+                </div>
+
+                <div>
+                    <select id="calificacion">
+                        <option value="5">★★★★★ (5/5) - Excelente</option>
+                        <option value="4">★★★★☆ (4/5) - Muy Bueno</option>
+                        <option value="3">★★★☆☆ (3/5) - Bueno</option>
+                        <option value="2">★★☆☆☆ (2/5  - Regular)</option>
+                        <option value="1">★☆☆☆☆ (1/5) - Malo</option>
+                    </select>
+                    <textarea id="comentario"  class="block text-xs uppercase text-gray-300 mb-1" required placeholder="Escribe tu opinión..."></textarea>
+                    <button type="submit">PUBLICAR RESEÑA</button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Barba y Estilo - Barbería Urbana. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../../JavaScript/resenas.js"></script>
+
+</body>
+</html>
