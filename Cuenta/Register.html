@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Barba y Estilo - Registro </title>
+    <link rel="stylesheet" href="../CSS/barber.css">
 </head>
 <body>
     
     <header>
         <nav>
-            <a href="/HTML/Home.html"> Home </a>
-            <a href="Login.html"> Login </a>
+            <a href="../HTML/index.html"> Home </a>
+            <a href="login.html"> Login </a>
         </nav>
     </header>
 
@@ -21,20 +22,24 @@
         <form>
 
             <label for="nombre"> Nombre Completo: </label> 
-            <input type="text" placeholder="Ingrese su nombre" id="nombre"/>
+            <input type="text" placeholder="Ingrese su nombre" id="nombre" required/>
 
             <label for="correo"> Correo Electronico: </label> 
-            <input type="text" placeholder="Ingrese su Correo" id="correo"/>
+            <input type="text" placeholder="Ingrese su Correo" id="correo" required/>
 
             <label for="contraseña"> Contraseña: </label> 
-            <input type="password" placeholder="Ingrese Contraseña" id="contraseña">
+            <input type="password" placeholder="Ingrese Contraseña" id="contraseña" required  />
 
-            <a href="Login.html"> <button type="button"> ¿ya tienes una cuenta? </button> </a>
-            <a href="/HTML/index.html"> <button type="button"> REGISTRARSE </button> </a>
+            <a href="login.html"> ¿ya tienes una cuenta? </a>
+            <a href="/HTML/index.html"> <button type="submit"> REGISTRARSE </button> </a>
 
         </form>
 
     </main>
+
+    <footer>
+        <p>&copy; 2026 Barba y Estilo - Barbería Urbana. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>

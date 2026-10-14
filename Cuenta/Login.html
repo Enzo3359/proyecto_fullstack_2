@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Barba y Estilo - Login </title>
+    <link rel="stylesheet" href="../CSS/barber.css">
 </head>
 <body>
     
     <header>
         <nav>
-            <a href="/HTML/Home.html"> Home </a>
-            <a href="Register.html"> Registrar </a>
+            <a href="../HTML/index.html"> Home </a>
+            <a href="register.html"> Registrar </a>
         </nav>
     </header>
 
     <main>
         <h1> Login </h1>
-        <p> Ingresa tu correo y tu contraseña para iniciar secion </p>
+        <p> Ingresa tu correo y tu contraseña para iniciar sesión </p>
 
         <form>
             
-            <label for="correo"> Correo Electronico: </label>
-            <input type="text" placeholder="Ingrese su Correo" id="correo" />
+            <label for="correo"> Correo Electrónico: </label>
+            <input type="email" placeholder="Ingrese su Correo" id="correo" required/>
 
             <label for="contraseña"> Contraseña: </label>
-            <input type="password" placeholder="Ingrese Contraseña" id="contraseña" />
+            <input type="password" placeholder="Ingrese Contraseña" id="contraseña" required/>
 
-            <a href="ForgotPassword.html"> <button type="button"> ¿Olvidase tu Contraseña? </button> </a>
-            <a href="/HTML/index.html"> <button type="button"> INICIAR SECION </button> </a>
-            <a href="Register.html"> <button type="button"> CREAR UNA CUENTA </button> </a>
+            <button type="submit"> Iniciar sesión </button> 
 
         </form>
+        <a href="forgotPassword.html"> ¿Olvidaste tu Contraseña? </a>
+        
+        <a href="register.html">  Crear una cuenta </a>
 
     </main>
+
+    <footer>
+        <p>&copy; 2026 Barba y Estilo - Barbería Urbana. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>

@@ -24,11 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const resenas = obtenerResenas();
         listaResenas.innerHTML = '';
 
-        if (resenas.length === 0) {
-            listaResenas.innerHTML = '<p class="sin-resenas">Aún no hay reseñas. ¡Sé el primero en opinar!</p>';
-            return;
-        }
-
         resenas.forEach((resena) => {
             const card = document.createElement('article');
             card.className = 'reseña-card';
