@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Barba y Estilo - Hisorial de Cortes </title>
+    <link rel="stylesheet" href="../../CSS/barber.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <a href="dashboard.html"> Resumen </a>
+            <a href="cortes.html"> Cortes </a>
+            <a href="perfil.html"> Perfil </a>
+            <a href="../../Cuenta/login.html"> Cerrar Sesión </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1> Cortes Realizados </h1>
+        <p> Consulta y gestiona el historial de servicios </p>
+
+        <section class="form-contenedor">
+            <h2> Registrar Corte</h2>
+            <form id="form-corte">
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" required placeholder="Nombre del cliente">
+
+                <label for="tipo-servicio">Servicio Prestado</label>
+                <select id="tipo-servicio" required>
+                    <option value="Corte Pelo">Corte Pelo</option>
+                    <option value="Arrelo barba"> Arreglo Barba </option>
+                    <option value="Tintura"> Tintura </option>
+                </select>
+
+                <label for="barbero">Barbero:</label>
+                <input type="text" id="barbero" required placeholder="Tu nombre">
+
+                <label for="fecha"> Fecha: </label>
+                <input type="date" id="fecha" required>
+
+                <label for="importe">Ingreso ($):</label>
+                <input type="number" id="importe" required placeholder="Ej: 6500">
+
+                <button type="submit">Guardar Corte</button>
+            </form>
+        </section>
+
+        <!-- Tabla dinámica -->
+        <section>
+            <h2>Historial de Cortes</h2>
+            <table class="tabla-datos">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Servicio</th>
+                        <th>Barbero</th>
+                        <th>Fecha</th>
+                        <th>Ingreso</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-cortes">
+                    <!-- Aquí JS insertará las filas automáticamente -->
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Barba y Estilo - Barbería Urbana. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../../JavaScript/cortes.js"></script>
+
+</body>
+</html>
