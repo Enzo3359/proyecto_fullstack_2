@@ -26,12 +26,12 @@
 
             <article class="total-cortes">
                 <h2> Total de Cortes </h2>
-                <p> 128 </p>
+                <p id="total-cortes">  </p>
             </article>
 
             <article class="total-ingresos">
                 <h2> Ingresos Generados </h2>
-                <p> $832.000 </p>
+                <p id="total-ingresos"> 0 </p>
             </article>
 
         </section>
@@ -47,22 +47,7 @@
                         <th> Fechas </th>
                         <th> Ingresos </th>
                     </tr>
-                    <tbody>
-                        <tr>
-                            <td> Carlos Silvas </td>
-                            <td> Corte Fade </td>
-                            <td> 15/10/2026 </td>
-                            <td> $10.000 </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td> Gonzalo Muños </td>
-                            <td> Diseño de Barba </td>
-                            <td> 14/10/2026 </td>
-                            <td> $8.000 </td>
-                        </tr>
-                    </tbody>
+                    <tbody id="ultimos-cortes"></tbody>
                 </thead>
             </table>
         </section>
@@ -71,6 +56,8 @@
     <footer>
         <p>&copy; 2026 Barba y Estilo - Barbería Urbana. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="../../JavaScript/dashboard.js"></script>
 
 </body>
 </html>
