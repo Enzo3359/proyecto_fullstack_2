@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Barba y Estilo - Ingresos </title>
+    <link rel="stylesheet" href="../../CSS/barber.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="dashboard-propietario.html"> Resumen </a>
+            <a href="reservas.html"> Reservas </a>
+            <a href="ingresos.html"> Ingresos </a>
+            <a href="perfil.html"> Perfil </a>
+            <a href="../../Cuenta/Login.html"> Cerrar Sesión </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1> Ingresos </h1>
+        <p> Ingresos generados a partir de los cortes registrados por los barberos </p>
+
+        <section class="kpi-grid">
+
+            <article class="card-kpi">
+                <h3>Ingresos Totales</h3>
+                <p class="kpi-value" id="ingresos-totales">$0</p>
+            </article>
+
+            <article class="card-kpi">
+                <h3>Cortes Realizados</h3>
+                <p class="kpi-value" id="cortes-realizados">0</p>
+            </article>
+
+            <article class="card-kpi">
+                <h3>Ticket Promedio</h3>
+                <p class="kpi-value" id="ticket-promedio">$0</p>
+            </article>
+
+        </section>
+
+        <section>
+            <h2>Ingresos por Barbero</h2>
+            <table class="tabla-datos">
+                <thead>
+                    <tr>
+                        <th>Barbero</th>
+                        <th>Cortes</th>
+                        <th>Ingresos Generados</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-ingresos-barbero"></tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Barba y Estilo - Barbería Urbana. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../../JavaScript/ingresos.js"></script>
+
+</body>
+</html>

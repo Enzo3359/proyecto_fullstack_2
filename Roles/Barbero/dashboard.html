@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> BArba y Estilo - Panel del Barbero </title>
+    <title> Barba y Estilo - Panel del Barbero </title>
     <link rel="stylesheet" href="../../CSS/barber.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
             <a href="dashboard.html"> Resumen </a>
             <a href="cortes.html"> Cortes </a>
             <a href="perfil.html"> Perfil </a>
-            <a href="../../Cuenta/login.html"> Cerrar Sesión </a>
+            <a href="../../Cuenta/Login.html"> Cerrar Sesión </a>
         </nav>
     </header>
 
@@ -22,16 +22,16 @@
         <h1> Panel del Barbero </h1>
         <p> Gestiona tu jornada en un solo lugar </p>
 
-        <section>
+        <section class="kpi-grid">
 
-            <article class="total-cortes">
-                <h2> Total de Cortes </h2>
-                <p id="total-cortes">  </p>
+            <article class="card-kpi">
+                <h3> Total de Cortes </h3>
+                <p class="kpi-value" id="total-cortes"> 0 </p>
             </article>
 
-            <article class="total-ingresos">
-                <h2> Ingresos Generados </h2>
-                <p id="total-ingresos"> 0 </p>
+            <article class="card-kpi">
+                <h3> Ingresos Generados </h3>
+                <p class="kpi-value" id="total-ingresos"> $0 </p>
             </article>
 
         </section>
@@ -39,7 +39,7 @@
         <section>
             <h2> Ultimos Cortes Realizados </h2>
 
-            <table>
+            <table class="tabla-datos">
                 <thead>
                     <tr>
                         <th> Cliente </th>
@@ -47,8 +47,8 @@
                         <th> Fechas </th>
                         <th> Ingresos </th>
                     </tr>
-                    <tbody id="ultimos-cortes"></tbody>
                 </thead>
+                <tbody id="ultimos-cortes"></tbody>
             </table>
         </section>
     </main>

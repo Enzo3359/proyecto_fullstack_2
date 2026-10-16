@@ -11,7 +11,7 @@
     <header>
         <nav>
             <a href="../HTML/index.html"> Home </a>
-            <a href="register.html"> Registrar </a>
+            <a href="Register.html"> Registrar </a>
         </nav>
     </header>
 
@@ -27,18 +27,23 @@
             <label for="contrasena"> Contraseña: </label>
             <input type="password" placeholder="Ingrese Contraseña" id="contrasena" required/>
 
-            <button type="submit"> Iniciar sesión </button> 
+            <p id="mensaje-login" class="mensaje-error"></p>
+
+            <button type="submit"> Iniciar sesión </button>
 
         </form>
         <a href="forgot-password.html"> ¿Olvidaste tu Contraseña? </a>
         
-        <a href="register.html">  Crear una cuenta </a>
+        <a href="Register.html">  Crear una cuenta </a>
 
     </main>
 
     <footer>
         <p>&copy; 2026 Barba y Estilo - Barbería Urbana. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="../JavaScript/auth.js"></script>
+    <script src="../JavaScript/login.js"></script>
 
 </body>
 </html>

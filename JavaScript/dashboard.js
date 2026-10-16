@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
 
     const CLAVE_CORTES = 'cortesBarberia';
-    const formCorte = document.getElementById('form-corte');
-    const tablaCortes = document.getElementById('tabla-cortes');
 
     // 1. Obtener cortes del localStorage
     function obtenerCortes() {

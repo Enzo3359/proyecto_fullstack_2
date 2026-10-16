@@ -15,8 +15,8 @@
             <a href="reserva-cita.html"> Reservar Cita </a>
             <a href="resenas.html"> Reseñas </a>
             <a href="contactos.html"> Contactos </a>
-            <a href="../../Cuenta/login.html"> Iniciar sesión </a>
-            <a href="../../Cuenta/register.html"> Registrarse </a>
+            <a href="../../Cuenta/Login.html"> Iniciar sesión </a>
+            <a href="../../Cuenta/Register.html"> Registrarse </a>
         </nav>
     </header>
 
@@ -48,25 +48,24 @@
                 </article>
 
                 <h2> Danos tu opinion: </h2>
-                <form id="form-resena" class="space-y-4">
-                <div>
-                    <label for="nombre-resena" class="block text-xs uppercase text-gray-300 mb-1">Tu Nombre</label>
-                    <input type="text" id="nombre-resena" required placeholder="Ej. Carlos Silva" class="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded text-white">
-                </div>
+                <form id="form-resena">
+                    <label for="nombre-resena"> Tu Nombre: </label>
+                    <input type="text" id="nombre-resena" required placeholder="Ej. Carlos Silva">
 
-                <div>
+                    <label for="calificacion"> Calificación: </label>
                     <select id="calificacion">
                         <option value="5">★★★★★ (5/5) - Excelente</option>
                         <option value="4">★★★★☆ (4/5) - Muy Bueno</option>
                         <option value="3">★★★☆☆ (3/5) - Bueno</option>
-                        <option value="2">★★☆☆☆ (2/5  - Regular)</option>
+                        <option value="2">★★☆☆☆ (2/5) - Regular</option>
                         <option value="1">★☆☆☆☆ (1/5) - Malo</option>
                     </select>
-                    <textarea id="comentario"  class="block text-xs uppercase text-gray-300 mb-1" required placeholder="Escribe tu opinión..."></textarea>
-                    <button type="submit">PUBLICAR RESEÑA</button>
-                </div>
 
-            </form>
+                    <label for="comentario"> Tu opinión: </label>
+                    <textarea id="comentario" required placeholder="Escribe tu opinión..."></textarea>
+
+                    <button type="submit">PUBLICAR RESEÑA</button>
+                </form>
 
         </section>
 

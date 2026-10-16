@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const CLAVE_PERFIL = 'perfilBarbero';
     const PERFIL_POR_DEFECTO = {
         nombre: 'Dylan Elgueta',
-        correo: 'dy.elgueta@barbayestilo.cl',
+        correo: 'dy.elgueta@barberlatino.com',
         telefono: '+56 9 1234 5678',
         especialidad: 'Corte con Tijeras',
         notificaciones: true
@@ -25,11 +25,24 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('telefono').value = perfil.telefono;
     document.getElementById('especialidad').value = perfil.especialidad;
 
+    const CORREO_BARBERO = /^[^\s@]+@barberlatino\.com$/i;
+    const mensajeDatos = document.getElementById('mensaje-datos');
+
     formDatos.addEventListener('submit', function (e) {
         e.preventDefault();
+
+        const correo = document.getElementById('correo').value.trim();
+
+        if (!CORREO_BARBERO.test(correo)) {
+            mensajeDatos.textContent = 'El correo debe ser institucional, terminado en @barberlatino.com';
+            return;
+        }
+
+        mensajeDatos.textContent = '';
+
         const nuevo = {
             nombre: document.getElementById('nombre').value.trim(),
-            correo: document.getElementById('correo').value.trim(),
+            correo: correo,
             telefono: document.getElementById('telefono').value.trim(),
             especialidad: document.getElementById('especialidad').value.trim(),
             notificaciones: perfil.notificaciones

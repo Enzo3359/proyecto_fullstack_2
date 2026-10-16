@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const hora = document.getElementById('hora').value;
         const barbero = document.querySelector('input[name="barbero"]:checked').value;
 
-        if (nombre === '' || telefono === '' || opciones.value === '' || fecha === '' || hora.value || barbero.value) {
+        if (nombre === '' || telefono === '' || opciones.value === '' || fecha === '' || hora === '' || barbero === '') {
         alert('Por favor completa todos los campos.');
         return;
         }
