@@ -2,9 +2,73 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #000000; /* Fondo negro principal */
-  color: #ffffff; 
+  color: #ffffff;
   margin: 0;
   padding: 0;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ---- Animaciones ---- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Entrada escalonada del hero de Inicio */
+.hero-animado > * {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.hero-animado > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-animado > *:nth-child(2) { animation-delay: 0.3s; }
+.hero-animado > *:nth-child(3) { animation-delay: 0.5s; }
+.hero-animado > *:nth-child(4) { animation-delay: 0.7s; }
+
+/* Hover: tarjetas se levantan un poco */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover: botones y enlaces tipo botón */
+a.boton, #inicio a, form button, .btn-eliminar-corte {
+  transition: transform 0.2s ease;
+}
+a.boton:hover, #inicio a:hover, form button:hover {
+  transform: translateY(-2px);
+}
+
+/* Revelado al hacer scroll (ver JavaScript/animaciones.js) */
+.animar-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animar-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .hero-animado > *,
+  .hover-lift,
+  a.boton, #inicio a, form button,
+  .animar-scroll {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Enlaces generales en Azul Barbería */
@@ -33,15 +97,57 @@ nav a {
 }
 
 nav a:hover {
-  color: #0055ff; 
+  color: #0055ff;
+}
+
+#boton_cambio {
+  background: none;
+  border: 1px solid #444444;
+  border-radius: 50%;
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+#boton_cambio:hover {
+  border-color: #d62828;
+  transform: translateY(-2px);
+}
+
+body.modo-claro header:not(.header-hero) #boton_cambio {
+  border-color: #cccccc;
+  color: #1a1a1a;
+}
+
+/*NAVBAR FLOTANTE Y TRASLUCIDA, SOLO SOBRE EL HERO DE INICIO*/
+header.header-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  border-bottom: none;
+  z-index: 10;
 }
 
 /*SECCIÓN INICIO (HERO)*/
 #inicio {
   text-align: center;
-  padding: 60px 20px;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #0d0d0d;
-  border-bottom: 2px solid #0055ff; 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('../Imagenes/Fondos/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
 }
 
 #inicio h1 {
@@ -87,10 +193,16 @@ h3 {
 .servicio-card {
   background-color: #1a1a1a;
   border: 1px solid #333333;
-  border-left: 4px solid #0055ff; 
+  border-left: 4px solid #0055ff;
   border-radius: 6px;
   padding: 15px;
   margin-bottom: 15px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .servicio-card h4 {
@@ -133,7 +245,7 @@ form label {
   color: #ffffff;
 }
 
-form input, form select {
+form input, form select, form textarea {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -142,11 +254,12 @@ form input, form select {
   background-color: #000000;
   color: #ffffff;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
-form input:focus, form select:focus {
+form input:focus, form select:focus, form textarea:focus {
   outline: none;
-  border-color: #0055ff; 
+  border-color: #0055ff;
 }
 
 form button {
@@ -169,10 +282,16 @@ form button:hover {
 /*RESEÑAS*/
 .reseña-card{
   background-color: #1a1a1a;
-  border-left: 4px solid #d62828; 
+  border-left: 4px solid #d62828;
   padding: 12px 15px;
   margin-bottom: 15px;
   border-radius: 0 6px 6px 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.reseña-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .reseña-card blockquote {
@@ -213,48 +332,201 @@ footer li {
   color: #ffffff;
 }
 
-body.modo-oscuro {
-  background-color: #f5f5f5;
+/*MODO CLARO (por defecto el sitio es oscuro; esta clase activa el modo claro)*/
+body.modo-claro {
+  background-color: #f5f0e6;
   color: #1a1a1a;
 }
 
-body.modo-oscuro header {
+body.modo-claro header:not(.header-hero) {
   background-color: #ffffff;
   border-bottom: 4px solid #d62828;
 }
 
-body.modo-oscuro nav a {
+body.modo-claro header:not(.header-hero) nav a {
   color: #1a1a1a;
 }
 
-body.modo-oscuro #inicio {
-  background-color: #eeeeee;
+body.modo-claro .servicio-card,
+body.modo-claro .reseña-card,
+body.modo-claro .barbero,
+body.modo-claro .card-kpi,
+body.modo-claro .tabla-datos,
+body.modo-claro #formulario {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-color: #dddddd;
 }
 
-body.modo-oscuro .servicio-card,
-body.modo-oscuro .reseña-card,
-body.modo-oscuro #formulario {
+body.modo-claro .servicio-card h4,
+body.modo-claro .barbero h3,
+body.modo-claro .kpi-value,
+body.modo-claro form label {
+  color: #1a1a1a;
+}
+
+body.modo-claro .barbero p,
+body.modo-claro .reseña-card blockquote {
+  color: #555555;
+}
+
+body.modo-claro .tabla-datos th {
+  background-color: #f0f0f0;
+}
+
+body.modo-claro .tabla-datos tr:hover {
+  background-color: #f7f7f7;
+}
+
+body.modo-claro form input,
+body.modo-claro form select,
+body.modo-claro form textarea {
   background-color: #ffffff;
   color: #1a1a1a;
   border-color: #cccccc;
 }
 
-body.modo-oscuro .servicio-card h4,
-body.modo-oscuro form label {
-  color: #1a1a1a;
-}
-
-body.modo-oscuro form input,
-body.modo-oscuro form select {
-  background-color: #ffffff;
-  color: #1a1a1a;
-  border-color: #cccccc;
-}
-
-body.modo-oscuro footer {
+body.modo-claro footer {
   background-color: #eeeeee;
 }
 
-body.modo-oscuro footer h2 {
-  color: #1a1a1a;
+/*PANEL PROPIETARIO: TARJETAS KPI*/
+.kpi-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card-kpi {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  border-top: 4px solid #d62828;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 200px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-kpi:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-kpi h3 {
+  color: #0055ff;
+  border-bottom: none;
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.kpi-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 10px 0 0 0;
+}
+
+/*PANEL PROPIETARIO: TABLAS*/
+.tabla-datos {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+}
+
+.tabla-datos th, .tabla-datos td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #333333;
+}
+
+.tabla-datos th {
+  background-color: #111111;
+  color: #d62828;
+}
+
+.tabla-datos tr:hover {
+  background-color: #222222;
+}
+
+/*SELECCION DE BARBERO*/
+#lista-barberos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.barbero {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  flex: 1 1 150px;
+  max-width: 180px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.barbero:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.barbero img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.barbero h3 {
+  font-size: 16px;
+  margin: 5px 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.barbero p {
+  font-size: 13px;
+  color: #cccccc;
+}
+
+.barbero label {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*SECCION CONOCENOS: tarjetas mas grandes, con bio*/
+#conocenos .barbero {
+  max-width: 280px;
+  padding: 20px;
+}
+
+#conocenos .barbero img {
+  width: 130px;
+  height: 130px;
+}
+
+#conocenos .barbero .especialidad {
+  color: #d62828;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/*MENSAJES DE ERROR EN FORMULARIOS*/
+.mensaje-error {
+  color: #d62828;
+  font-weight: bold;
+  min-height: 20px;
 }

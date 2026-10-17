@@ -1,0 +1,150 @@
+/* Tema Dorado / Plata / Negro — redefine variables de Bootstrap. Oscuro es el default. */
+:root,
+[data-bs-theme="dark"] {
+  --bs-body-bg: #000000;
+  --bs-body-color: #e9e9e9;
+
+  --bs-dark: #0a0a0a;
+  --bs-dark-rgb: 10, 10, 10;
+  --bs-secondary-bg: #0f0f0f;
+  --bs-tertiary-bg: #161616;
+
+  /* dorado, reemplaza el acento "danger" (btn-danger, text-danger, border-danger) */
+  --bs-danger: #d4af37;
+  --bs-danger-rgb: 212, 175, 55;
+  --bs-danger-text-emphasis: #d4af37;
+  --bs-danger-bg-subtle: #2b2208;
+  --bs-danger-border-subtle: #d4af37;
+
+  /* plata, reemplaza "light" y "secondary" (btn-outline-light, border-secondary) */
+  --bs-light: #c0c0c0;
+  --bs-light-rgb: 192, 192, 192;
+  --bs-secondary: #b0b0b0;
+  --bs-secondary-rgb: 176, 176, 176;
+
+  --bs-link-color: #d4af37;
+  --bs-link-color-rgb: 212, 175, 55;
+  --bs-link-hover-color: #e8c660;
+  --bs-link-hover-color-rgb: 232, 198, 96;
+}
+
+/* Modo claro: mismo dorado/plata, pero sobre fondo crema en vez de negro */
+[data-bs-theme="light"] {
+  --bs-body-bg: #f5f0e6;
+  --bs-body-color: #1a1a1a;
+
+  /* las tarjetas "bg-dark" pasan a blanco, con texto oscuro (ver regla .text-white abajo) */
+  --bs-dark: #ffffff;
+  --bs-dark-rgb: 255, 255, 255;
+  --bs-secondary-bg: #ffffff;
+  --bs-tertiary-bg: #f0ebe0;
+
+  /* dorado más oscuro para que siga siendo legible sobre fondo claro */
+  --bs-danger: #9c7a1e;
+  --bs-danger-rgb: 156, 122, 30;
+  --bs-danger-text-emphasis: #9c7a1e;
+  --bs-danger-bg-subtle: #f3e9cc;
+  --bs-danger-border-subtle: #9c7a1e;
+
+  --bs-light: #6c757d;
+  --bs-light-rgb: 108, 117, 125;
+  --bs-secondary: #6c757d;
+  --bs-secondary-rgb: 108, 117, 125;
+
+  --bs-border-color: #ddd6c7;
+
+  --bs-link-color: #9c7a1e;
+  --bs-link-color-rgb: 156, 122, 30;
+  --bs-link-hover-color: #7a5f17;
+  --bs-link-hover-color-rgb: 122, 95, 23;
+}
+
+/* Las tarjetas oscuras (bg-dark + text-white) se vuelven blancas con texto oscuro en modo claro */
+[data-bs-theme="light"] .text-white {
+  color: #1a1a1a !important;
+}
+
+/* Excepción: el hero de Inicio va siempre con texto blanco (está sobre la foto oscura) */
+[data-bs-theme="light"] .hero-texto-fijo,
+[data-bs-theme="light"] .hero-texto-fijo .text-white {
+  color: #ffffff !important;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bs-body-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Animaciones ---- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Transición de página: se reinicia en cada cambio de ruta (ver key en App.jsx) */
+.page-fade {
+  animation: fadeIn 0.4s ease;
+}
+
+/* Entrada escalonada del hero de Inicio */
+.hero-animado > * {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.hero-animado > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-animado > *:nth-child(2) { animation-delay: 0.3s; }
+.hero-animado > *:nth-child(3) { animation-delay: 0.5s; }
+
+/* Hover: tarjetas se levantan un poco */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover: botones */
+.btn {
+  transition: transform 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Revelado al hacer scroll (usado por el componente Reveal) */
+.animar-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animar-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-fade,
+  .hero-animado > *,
+  .hover-lift,
+  .btn,
+  .animar-scroll {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
