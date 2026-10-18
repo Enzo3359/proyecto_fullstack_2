@@ -1,5 +1,7 @@
 import { crear, leerTodos, actualizar, eliminar } from './db'
 import dylanFoto from '../assets/barberos/dylan.jpg'
+import enzoFoto from '../assets/barberos/enzo.jpg'
+import arletteFoto from '../assets/barberos/arlette.jpg'
 
 const CLAVE_BARBEROS = 'barberosBarberia'
 
@@ -22,16 +24,16 @@ function sembrarBarberosPorDefecto() {
         telefono: '',
         especialidad: 'Fade y Degradados',
         descripcion: 'Enzo se especializa en degradados modernos y diseños personalizados, siempre al tanto de las últimas tendencias urbanas.',
-        imagen: null,
+        imagen: enzoFoto,
         notificaciones: true
     })
     crear(CLAVE_BARBEROS, {
-        nombre: 'Brandom Espinoza',
-        correo: 'brandom@barbayestilo.com',
+        nombre: 'Arlette Hevia',
+        correo: 'arlette@barbayestilo.com',
         telefono: '',
-        especialidad: 'Barba y Afeitado Clásico',
-        descripcion: 'Brandom domina las técnicas tradicionales de afeitado con navaja y el cuidado integral de la barba.',
-        imagen: null,
+        especialidad: 'Diseño y Coloración',
+        descripcion: 'Arlette combina técnicas modernas de corte y coloración con un trato cercano y atento a cada detalle, logrando estilos personalizados para cada cliente.',
+        imagen: arletteFoto,
         notificaciones: true
     })
 }
