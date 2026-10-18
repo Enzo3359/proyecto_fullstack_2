@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <header> <!-- Todo (R1): <nav> con el logo, nombre y enlaces a Inicio, Servicios, Precios, Contactos-->
+    <header class="header-hero">
         <nav>
             <!-- logo -->
             <!--img class="logo" src="" alt="Logo de Barba y Estilo"/-->
@@ -18,6 +18,7 @@
             <a href="index.html"> Inicio </a>
             <a href="../Roles/Cliente/catalogo-servicios.html"> Servicios </a>
             <a href="../Roles/Cliente/reserva-cita.html"> Reservar Cita </a>
+            <a href="../Roles/Cliente/conocenos.html"> Conócenos </a>
             <a href="../Roles/Cliente/resenas.html"> Reseñas </a>
             <a href="../Roles/Cliente/contactos.html"> Contactos </a>
             <a href="../Cuenta/Login.html"> Iniciar sesión </a>
@@ -27,8 +28,7 @@
     </header>
 
     <main>
-        <section id="inicio"> <!-- Todo (R2): Hero section -->
-            <!-- La imagen sera implementada a traves de CSS con background-image, por el momento este esta pendiente -->
+        <section id="inicio" class="hero-animado">
             <h1> Estilo urbano, actitud propia </h1>
             <p> En Barba y Estilo combinamos técnica clásica y tendencias urbanas para que cada corte sea tan único como tú. </p>
             
@@ -44,6 +44,7 @@
     </footer>
 
     <!-- alzar aqui el archivo JavaScript -->
+    <script src="../JavaScript/tema.js"></script>
     <script src="../JavaScript/barber.js"></script>
 
 </body>

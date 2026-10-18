@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const CLAVE_PERFIL = 'perfilPropietario';
     const PERFIL_POR_DEFECTO = {
         nombre: 'Valentina Rojas',
-        correo: 'valentina.rojas@adminbarberlatino.com',
+        correo: 'valentina.rojas@adminbarbayestilo.com',
         telefono: '+56 9 5555 1234',
         notificaciones: true
     };
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('correo').value = perfil.correo;
     document.getElementById('telefono').value = perfil.telefono;
 
-    const CORREO_PROPIETARIO = /^[^\s@]+@adminbarberlatino\.com$/i;
+    const CORREO_PROPIETARIO = /^[^\s@]+@adminbarbayestilo\.com$/i;
 
     formDatos.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const correo = document.getElementById('correo').value.trim();
 
         if (!CORREO_PROPIETARIO.test(correo)) {
-            mensajeDatos.textContent = 'El correo debe ser institucional, terminado en @adminbarberlatino.com';
+            mensajeDatos.textContent = 'El correo debe ser institucional, terminado en @adminbarbayestilo.com';
             return;
         }
 

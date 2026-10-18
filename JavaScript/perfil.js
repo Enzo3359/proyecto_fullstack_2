@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const CLAVE_PERFIL = 'perfilBarbero';
     const PERFIL_POR_DEFECTO = {
         nombre: 'Dylan Elgueta',
-        correo: 'dy.elgueta@barberlatino.com',
+        correo: 'dy.elgueta@barbayestilo.com',
         telefono: '+56 9 1234 5678',
         especialidad: 'Corte con Tijeras',
         notificaciones: true

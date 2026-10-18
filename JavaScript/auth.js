@@ -1,10 +1,10 @@
 function obtenerRolPorCorreo(correo) {
     const correoNormalizado = correo.trim().toLowerCase();
 
-    if (correoNormalizado.endsWith('@adminbarberlatino.com')) {
+    if (correoNormalizado.endsWith('@adminbarbayestilo.com')) {
         return 'propietario';
     }
-    if (correoNormalizado.endsWith('@barberlatino.com')) {
+    if (correoNormalizado.endsWith('@barbayestilo.com')) {
         return 'barbero';
     }
     return 'cliente';

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const CLAVE_PERFIL = 'perfilBarbero';
     const PERFIL_POR_DEFECTO = {
         nombre: 'Dylan Elgueta',
-        correo: 'dy.elgueta@barberlatino.com',
+        correo: 'dy.elgueta@barbayestilo.com',
         telefono: '+56 9 1234 5678',
         especialidad: 'Corte con Tijeras',
         notificaciones: true
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('telefono').value = perfil.telefono;
     document.getElementById('especialidad').value = perfil.especialidad;
 
-    const CORREO_BARBERO = /^[^\s@]+@barberlatino\.com$/i;
+    const CORREO_BARBERO = /^[^\s@]+@barbayestilo\.com$/i;
     const mensajeDatos = document.getElementById('mensaje-datos');
 
     formDatos.addEventListener('submit', function (e) {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const correo = document.getElementById('correo').value.trim();
 
         if (!CORREO_BARBERO.test(correo)) {
-            mensajeDatos.textContent = 'El correo debe ser institucional, terminado en @barberlatino.com';
+            mensajeDatos.textContent = 'El correo debe ser institucional, terminado en @barbayestilo.com';
             return;
         }
 

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const CLAVE_PERFIL = 'perfilPropietario';
     const PERFIL_POR_DEFECTO = {
         nombre: 'Valentina Rojas',
-        correo: 'valentina.rojas@adminbarberlatino.com',
+        correo: 'valentina.rojas@adminbarbayestilo.com',
         telefono: '+56 9 5555 1234',
         notificaciones: true
     };
